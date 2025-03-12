@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+    scroll-behavior: smooth;
+  }
+
+  a.active-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Space below the text */
+    width: 100%;
+    height: 2px;
+    background-color: #48e772; /* Cyan color */
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #48e772;
+    transition: width 0.3s ease;
+  }
+  
+  /* a:hover::after {
+    width: 100%;
+  } */
+  
+  @keyframes slideIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes borderRotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .border-animate {
+    animation: borderRotation 4s linear infinite;
+  }
