@@ -55,7 +55,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3">
         {/* Logo */}
         <div className="text-2xl font-bold text-white flex items-center gap-2">
-          <img className="w-10" src={logo} alt="Logo" />
+          <img className="w-10 rounded-sm" src={logo} alt="Logo" />
           <span>Sabbir</span>
         </div>
 
@@ -84,10 +84,8 @@ const Navbar = () => {
 
         {/* Get Started Button (Desktop) */}
         <div className="hidden md:block">
-        <button className="btn border-b-4    text-white px-6 py-2 rounded-lg shadow-md  ">
-              <a download href="">
-                Get Resume
-              </a>
+        <button className="transition-all bg-gradient-to-r from-red-400 to-green-500  text-white duration-300 px-6 py-2 border-b-4  rounded-lg shadow-md  hover:text-white">
+              <a href="#">Resume</a>
             </button>
         </div>
         {/* Mobile Menu Toggle */}

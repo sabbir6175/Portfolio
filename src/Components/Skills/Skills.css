@@ -1,0 +1,23 @@
+/* .borderBeam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    border: var(--border-width) solid transparent;
+    background: linear-gradient(135deg, var(--color-from) 25%, var(--color-to) 25%, var(--color-to) 50%, var(--color-from) 50%, var(--color-from) 75%, var(--color-to) 75%, var(--color-to));
+    background-size: 20px 20px;
+    animation: animate-border var(--duration) infinite;
+    transform-origin: var(--anchor);
+    animation-delay: var(--delay);
+  }
+  
+  @keyframes animate-border {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+   */

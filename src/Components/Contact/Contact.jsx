@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
   const [status, setStatus] = useState("");
@@ -6,28 +7,29 @@ const Contact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus("Sending...");
-
+    // service_45pebx4
     const formData = new FormData(event.target);
-    const response = await fetch("https://formspree.io/f/mbllpkaz", {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
+    console.log(formData)
+    // const response = await fetch("https://formspree.io/f/mbllpkaz", {
+    //   method: "POST",
+    //   body: formData,
+    //   headers: {
+    //     Accept: "application/json",
+    //   },
+    // });
 
-    if (response.ok) {
-      setStatus("Message sent successfully!");
-      event.target.reset();
-    } else {
-      setStatus("Error sending message. Please try again.");
-    }
+    // if (response.ok) {
+    //   setStatus("Message sent successfully!");
+    //   event.target.reset();
+    // } else {
+    //   setStatus("Error sending message. Please try again.");
+    // }
   };
 
   return (
     <section
       id="contact"
-      className="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 text-white py-10 px-5 md:px-20 lg:px-40"
+      className="bg-black text-white py-10 px-5 md:px-20 lg:px-40"
     >
       <div className="text-center">
         <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
@@ -37,7 +39,7 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-10">
         {/* Contact Information */}
         <div className="space-y-6">
           <div>
@@ -45,23 +47,14 @@ const Contact = () => {
             <p className="text-gray-400">Here are my details for easy communication.</p>
           </div>
           <div className="flex items-center gap-4">
-            <span className="bg-blue-500 p-3 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6 text-white"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5m-16.5 6.75h16.5m-16.5 6.75h16.5" />
-              </svg>
+            <span className="bg-green-400 p-3 rounded-full">
+              <MdEmail></MdEmail>
             </span>
             <div>
               <h4 className="font-bold">Email</h4>
               <p>
-                <a href="mailto:almamun602767@gmail.com" className="text-blue-400 hover:underline">
-                  almamun602767@gmail.com
+                <a href="mailto:sabbirhasannahid6175@gmail.com" className="text-blue-400 hover:underline">
+                sabbirhasannahid6175@gmail.com
                 </a>
               </p>
             </div>
@@ -82,34 +75,13 @@ const Contact = () => {
             <div>
               <h4 className="font-bold">Phone</h4>
               <p>
-                <a href="tel:+00801835371391" className="text-blue-400 hover:underline">
-                  +00801835371391
+                <a href="tel:+00801310101661" className="text-blue-400 hover:underline">
+                +00801310101661
                 </a>
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="bg-teal-500 p-3 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6 text-white"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 6.75l13.5 4.5M5.25 17.25l13.5-4.5m-13.5-4.5v9m13.5-9v9" />
-              </svg>
-            </span>
-            <div>
-              <h4 className="font-bold">WhatsApp</h4>
-              <p>
-                <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-                  Chat on WhatsApp
-                </a>
-              </p>
-            </div>
-          </div>
+         
         </div>
 
         {/* Contact Form */}
@@ -128,7 +100,7 @@ const Contact = () => {
               <label htmlFor="message" className="block text-gray-300 mb-1">Your Message</label>
               <textarea id="message" name="message" rows="5" required className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
             </div>
-            <button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-md hover:from-cyan-500 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500">Send Message</button>
+            <button type="submit" className="w-full bg-gradient-to-r from-green-500 to-red-400 text-white py-3 rounded-md  focus:outline-none focus:ring-2 ">Send Message</button>
           </form>
           {status && <p className="mt-4 text-center text-gray-300">{status}</p>}
         </div>

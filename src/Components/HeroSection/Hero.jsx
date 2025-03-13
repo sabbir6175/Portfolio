@@ -13,7 +13,7 @@ const Hero = () => {
     <section id="home" className="bg-black py-20 text-white">
       <div className="flex mt-[64px] max-w-7xl mx-auto  gap-12 md:gap-2 flex-col-reverse md:flex-row items-center justify-between px-10 ">
         {/* Left Side Content */}
-        <div className="md:w-1/2 text-center md:text-left space-y-3">
+        <div className="md:w-1/2 lg:max-w-md mx-auto text-center md:text-left space-y-3">
           <p className="text-2xl md:text-3xl font-semibold text-white">Hello I'm</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Sabbir Hasan</h1>
           <h1 className="text-xl md:text-3xl font-bold mt-4">
@@ -22,6 +22,8 @@ const Hero = () => {
               <Typewriter
                 words={[
                   "MERN Stack Developer",
+                  "UI/UX Designer",
+                 
                   
                 ]}
                 loop={true}
@@ -34,7 +36,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="mt-6 text-gray-400">
-           I make a beautiful website
+          "I build beautiful, dynamic, and user-friendly web applications with a focus on seamless user experience and modern design. Proficient in React.js, Node.js, Express.js, MongoDB "
           </p>
           <div className="pt-3 flex justify-center md:justify-start gap-6">
             <a
@@ -64,12 +66,10 @@ const Hero = () => {
             </a>
           </div>
           <div className="py-6 flex justify-center md:justify-start gap-4">
-            <button className="btn border-b-4 btn-outline  text-white px-6 py-2 rounded-lg shadow-md transition-all duration-300">
-              <a download href="">
-                Resume
-              </a>
+          <button className="transition-all  bg-gradient-to-r from-red-400 to-green-500 duration-300 px-6 py-3 border-b-4  rounded-lg shadow-md  hover:text-white">
+              <a href="#">Resume</a>
             </button>
-            <button className="transition-all duration-300 px-6 py-3 border-b-4  rounded-lg shadow-md  hover:text-white">
+            <button className="transition-all  bg-gradient-to-r from-red-400 to-green-500 duration-300 px-6 py-3 border-b-4  rounded-lg shadow-md  hover:text-white">
               <a href="#contact">Contact</a>
             </button>
           </div>

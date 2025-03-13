@@ -2,25 +2,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-4 px-6">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <footer className="bg-gray-700 text-gray-300 py-2 ">
+      <div className="">
         {/* Left Section: Copyright */}
-        <p className="text-sm text-gray-400">
-          Copyright &copy; {new Date().getFullYear()}{" "}
-          <span className="text-yellow-400 font-semibold">Abdullah Almamun</span>. All Rights Reserved.
+        <p className="text-sm text-center text-gray-400">
+          Copyright&copy; {new Date().getFullYear()}{" Design By "}
+          <span className="text-green-500 text-center font-semibold"> Sabbir Hasan</span>
         </p>
 
-        {/* Right Section: Designed By */}
-        <p className="text-sm text-gray-400 mt-2 md:mt-0">
-          Designed by{" "}
-          <a
-            href="#"
-            className="text-yellow-400 hover:underline font-semibold"
-          >
-            Abdullah Almamun
-          </a>
-          .
-        </p>
+      
+       
       </div>
     </footer>
   );

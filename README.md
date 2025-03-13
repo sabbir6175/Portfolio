@@ -1,4 +1,4 @@
-![Portfolio Banner](https://i.imgur.com/iBnbukS.png/1200x400?text=Your+Portfolio+Banner)
+<!-- ![Portfolio Banner](https://i.imgur.com/iBnbukS.png/1200x400?text=Your+Portfolio+Banner)
 
 # 🌟 Personal Portfolio 🚀
 
@@ -66,4 +66,4 @@ npm run dev
 🔹 **Portfolio:** [your-portfolio-live-link.com](https://abdullah-portfolio-602767.surge.sh/)
 
 ---
-⭐ **If you like my portfolio, don't forget to give a star!** ⭐
+⭐ **If you like my portfolio, don't forget to give a star!** ⭐ -->
