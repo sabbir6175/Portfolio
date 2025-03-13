@@ -2,12 +2,12 @@ import { useRef } from "react";
 import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
-import { BiLogoMessenger, BiLogoWhatsappSquare } from "react-icons/bi";
+import { BiLogoMessenger, BiLogoWhatsappSquare, BiPhone } from "react-icons/bi";
 const Contact = () => {
-    const form = useRef()
+  const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    
+
     emailjs
       .sendForm(
         "service_45pebx4", // আপনার Service ID
@@ -20,13 +20,13 @@ const Contact = () => {
       // })
       .then(
         (result) => {
-          console.log('Message sent successfully!', result);
+          console.log("Message sent successfully!", result);
           Swal.fire({
             position: "top-end",
             icon: "success",
             title: "Message sent successfully!",
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
           });
           form.current.reset();
         },
@@ -37,10 +37,8 @@ const Contact = () => {
             title: "Oops...",
             text: "Failed to send message. Please try again.",
           });
-       
         }
       );
-      
   };
 
   return (
@@ -61,7 +59,9 @@ const Contact = () => {
         <div className="space-y-6">
           <div>
             <h3 className="text-2xl font-semibold mb-2">Contact Info</h3>
-            <p className="text-gray-400">Here are my details for easy communication.</p>
+            <p className="text-gray-400">
+              Here are my details for easy communication.
+            </p>
           </div>
           <div className="flex items-center gap-4">
             <span className="bg-green-400 p-3 rounded-full">
@@ -70,14 +70,31 @@ const Contact = () => {
             <div>
               <h4 className="font-bold">Email</h4>
               <p>
-              <a
-                href="mailto:sabbirhasannahid6175@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" inline-block 2  rounded text-white"
-              >
-              sabbirhasannahid6175@gmail.com
-              </a>
+                <a
+                  href="mailto:sabbirhasannahid6175@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" inline-block 2  rounded text-white"
+                >
+                  sabbirhasannahid6175@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="bg-green-500 p-3 rounded-full">
+              <BiPhone></BiPhone>
+            </span>
+            <div>
+              <h4 className="font-bold mb-3">Phone</h4>
+              <p>
+                <a
+                  href="tel:+8801310101661"
+                 
+                  className=" px-3 py-2 bg-gradient-to-r from-green-400 to-red-400 rounded-sm "
+                >
+                  01310101661
+                </a>
               </p>
             </div>
           </div>
@@ -88,38 +105,36 @@ const Contact = () => {
             <div>
               <h4 className="font-bold mb-3">Messenger</h4>
               <p>
-              <a
-                href="https://m.me/sabbirhasan075"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" px-3 py-2 bg-gradient-to-r from-green-400 to-red-400 rounded-sm "
-              >
-                Send a Message
-              </a>
+                <a
+                  href="https://m.me/sabbirhasan075"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" px-3 py-2 bg-gradient-to-r from-green-400 to-red-400 rounded-sm "
+                >
+                  Send a Message
+                </a>
               </p>
             </div>
           </div>
-         
-            <div className="flex items-center gap-4">
+
+          <div className="flex items-center gap-4">
             <span className="bg-green-500 p-3 rounded-full">
-            <BiLogoWhatsappSquare></BiLogoWhatsappSquare>
+              <BiLogoWhatsappSquare></BiLogoWhatsappSquare>
             </span>
             <div>
               <h4 className="font-bold mb-3">WhatsApp</h4>
               <p>
-              <a
-               
-               href="https://wa.me/8801310101661"
-               target="_blank"
-               rel="noopener noreferrer"
-               className=" px-3 py-2 bg-gradient-to-r from-green-400 to-red-400 rounded-sm "
-             >
-               Send a Message
-             </a>
+                <a
+                  href="https://wa.me/8801310101661"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" px-3 py-2 bg-gradient-to-r from-green-400 to-red-400 rounded-sm "
+                >
+                  Send a Message
+                </a>
               </p>
             </div>
           </div>
-         
         </div>
 
         {/* Contact Form */}
@@ -127,18 +142,47 @@ const Contact = () => {
           <h3 className="text-2xl font-semibold mb-4">Send Me a Message</h3>
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-gray-300 mb-1">Your Name</label>
-              <input type="text" id="name" name="name" required className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <label htmlFor="name" className="block text-gray-300 mb-1">
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-300 mb-1">Your Email</label>
-              <input type="email" id="email" name="email" required className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <label htmlFor="email" className="block text-gray-300 mb-1">
+                Your Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
             </div>
             <div>
-              <label htmlFor="message" className="block text-gray-300 mb-1">Your Message</label>
-              <textarea id="message" name="message" rows="5" required className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              <label htmlFor="message" className="block text-gray-300 mb-1">
+                Your Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
             </div>
-            <button type="submit" className="w-full bg-gradient-to-r from-green-500 to-red-400 text-white py-3 rounded-md  focus:outline-none focus:ring-2 ">Send Message</button>
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-green-500 to-red-400 text-white py-3 rounded-md  focus:outline-none focus:ring-2 "
+            >
+              Send Message
+            </button>
           </form>
         </div>
       </div>
