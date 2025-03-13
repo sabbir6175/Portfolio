@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- ![Portfolio Banner](https://i.imgur.com/iBnbukS.png/1200x400?text=Your+Portfolio+Banner)
 
 # 🌟 Personal Portfolio 🚀
@@ -67,3 +68,6 @@ npm run dev
 
 ---
 ⭐ **If you like my portfolio, don't forget to give a star!** ⭐ -->
+=======
+
+>>>>>>> a0a57fc14621fd12bc7b567ffb9c3eabf49ab306

@@ -114,7 +114,7 @@ const Project = () => {
                 <span className="px-2 py-1 border bg-green-200 text-red-400 rounded-md">Mongodb</span>
               </div>
 
-              <div className="flex flex-col md:flex-row gap-3 md:gap-10 justify-between items-center ">
+              <div className="flex flex-col lg:flex-row gap-3 lg:gap-10 justify-between items-center ">
                 <button
                   onClick={() =>
                     document.getElementById("my_modal_3").showModal()
@@ -164,7 +164,7 @@ const Project = () => {
                 <span className="px-2 py-1 border bg-green-200 text-red-400 rounded-md">Mongodb</span>
               </div>
 
-              <div className="flex flex-col md:flex-row gap-3 md:gap-10 justify-between items-center">
+              <div className="flex flex-col lg:flex-row gap-3 lg:gap-10 justify-between items-center">
                 <button
                   onClick={() =>
                     document.getElementById("my_modal_4").showModal()
@@ -215,7 +215,7 @@ const Project = () => {
                 <span className="px-2 py-1 border bg-green-200 text-red-400 rounded-md">Mongodb</span>
               </div>
 
-              <div className="flex flex-col md:flex-row gap-3 md:gap-10 justify-between items-center">
+              <div className="flex flex-col lg:flex-row gap-3 lg:gap-10 justify-between items-center">
                 <button
                   onClick={() =>
                     document.getElementById("my_modal_5").showModal()

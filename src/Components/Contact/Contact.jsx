@@ -1,29 +1,46 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { MdEmail } from "react-icons/md";
-
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+import { BiLogoMessenger, BiLogoWhatsappSquare } from "react-icons/bi";
 const Contact = () => {
-  const [status, setStatus] = useState("");
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setStatus("Sending...");
-    // service_45pebx4
-    const formData = new FormData(event.target);
-    console.log(formData)
-    // const response = await fetch("https://formspree.io/f/mbllpkaz", {
-    //   method: "POST",
-    //   body: formData,
-    //   headers: {
-    //     Accept: "application/json",
-    //   },
-    // });
-
-    // if (response.ok) {
-    //   setStatus("Message sent successfully!");
-    //   event.target.reset();
-    // } else {
-    //   setStatus("Error sending message. Please try again.");
-    // }
+    const form = useRef()
+  const sendEmail = (e) => {
+    e.preventDefault();
+    
+    emailjs
+      .sendForm(
+        "service_45pebx4", // আপনার Service ID
+        "template_94ncuff", // আপনার Template ID
+        form.current,
+        "EO0xLcYxtpls1zmPi" // আপনার Public Key
+      )
+      // .then(res =>{
+      //   toast.success('Message sent successfully')
+      // })
+      .then(
+        (result) => {
+          console.log('Message sent successfully!', result);
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Message sent successfully!",
+            showConfirmButton: false,
+            timer: 1500
+          });
+          form.current.reset();
+        },
+        (error) => {
+          console.error("EmailJS Error:", error); // Better error logging
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Failed to send message. Please try again.",
+          });
+       
+        }
+      );
+      
   };
 
   return (
@@ -53,31 +70,52 @@ const Contact = () => {
             <div>
               <h4 className="font-bold">Email</h4>
               <p>
-                <a href="mailto:sabbirhasannahid6175@gmail.com" className="text-blue-400 hover:underline">
-                sabbirhasannahid6175@gmail.com
-                </a>
+              <a
+                href="mailto:sabbirhasannahid6175@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" inline-block 2  rounded text-white"
+              >
+              sabbirhasannahid6175@gmail.com
+              </a>
               </p>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <span className="bg-green-500 p-3 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6 text-white"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.25V4.5a2.25 2.25 0 00-2.25-2.25h-12A2.25 2.25 0 003.75 4.5v15a2.25 2.25 0 002.25 2.25h12a2.25 2.25 0 002.25-2.25v-3.75" />
-              </svg>
+              <BiLogoMessenger></BiLogoMessenger>
             </span>
             <div>
-              <h4 className="font-bold">Phone</h4>
+              <h4 className="font-bold mb-3">Messenger</h4>
               <p>
-                <a href="tel:+00801310101661" className="text-blue-400 hover:underline">
-                +00801310101661
-                </a>
+              <a
+                href="https://m.me/sabbirhasan075"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" px-3 py-2 bg-gradient-to-r from-green-400 to-red-400 rounded-sm "
+              >
+                Send a Message
+              </a>
+              </p>
+            </div>
+          </div>
+         
+            <div className="flex items-center gap-4">
+            <span className="bg-green-500 p-3 rounded-full">
+            <BiLogoWhatsappSquare></BiLogoWhatsappSquare>
+            </span>
+            <div>
+              <h4 className="font-bold mb-3">WhatsApp</h4>
+              <p>
+              <a
+               
+               href="https://wa.me/8801310101661"
+               target="_blank"
+               rel="noopener noreferrer"
+               className=" px-3 py-2 bg-gradient-to-r from-green-400 to-red-400 rounded-sm "
+             >
+               Send a Message
+             </a>
               </p>
             </div>
           </div>
@@ -87,7 +125,7 @@ const Contact = () => {
         {/* Contact Form */}
         <div>
           <h3 className="text-2xl font-semibold mb-4">Send Me a Message</h3>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-gray-300 mb-1">Your Name</label>
               <input type="text" id="name" name="name" required className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
@@ -102,7 +140,6 @@ const Contact = () => {
             </div>
             <button type="submit" className="w-full bg-gradient-to-r from-green-500 to-red-400 text-white py-3 rounded-md  focus:outline-none focus:ring-2 ">Send Message</button>
           </form>
-          {status && <p className="mt-4 text-center text-gray-300">{status}</p>}
         </div>
       </div>
     </section>
