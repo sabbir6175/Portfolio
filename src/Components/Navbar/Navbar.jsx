@@ -85,7 +85,7 @@ const Navbar = () => {
         {/* Get Started Button (Desktop) */}
         <div className="hidden md:block">
         <button className="transition-all bg-gradient-to-r from-red-400 to-green-500  text-white duration-300 px-6 py-2 border-b-4  rounded-lg shadow-md  hover:text-white">
-              <a href="#">Resume</a>
+              <a href="https://drive.google.com/file/d/1f2SSGsNnqeNCUtWiPiFsXHPS4kewZ-2E/view" target="blank" >Resume</a>
             </button>
         </div>
         {/* Mobile Menu Toggle */}

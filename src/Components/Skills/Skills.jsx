@@ -13,7 +13,6 @@ const Skills = () => {
           <span className="text-green-400 text-xl font-bold ">
             <Typewriter
               words={[
-                "MERN Specailist ",
                 "UI/UX Designer",
                 "Responsive Design",
                 "JavaScript",
@@ -26,6 +25,7 @@ const Skills = () => {
                 "Tailwind CSS",
                 "Bootstrap",
                 "Github",
+                
               ]}
               loop={true}
               cursor

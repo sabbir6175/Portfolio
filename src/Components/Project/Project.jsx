@@ -89,7 +89,7 @@ const Project = () => {
         {/* ========================
                       card 1 
            ===============================*/}
-        <div className="group">
+        <div className="group ">
           <div className=" relative border-red-400 p-2 md:p-4 border-2 bg-white boxShadow rounded-xl group-hover:scale-x-100 group-hover:border-red-700 transition-transform  duration-200">
             <img
               src="https://i.ibb.co.com/rfk3dK0g/Blood-donation.png"
@@ -107,7 +107,7 @@ const Project = () => {
                 blood donation process by connecting donors with recipients,
                 ensuring....
               </p>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 ">
                 <span className="px-2 py-1 border bg-green-200 text-red-400 rounded-md">React.js</span>
                 <span className="px-2 py-1 border bg-green-200 text-red-400 rounded-md">Node.js</span>
                 <span className="px-2 py-1 border bg-green-200 text-red-400 rounded-md">Express.js</span>
@@ -143,14 +143,14 @@ const Project = () => {
         <div className="group">
           <div className=" relative border-red-400 p-2 md:p-4 border-2 bg-white boxShadow rounded-xl group-hover:scale-x-100 group-hover:border-red-700 transition-transform  duration-200">
             <img
-              src="https://i.ibb.co.com/ycdCkyqv/marathon-client-side-web-app-1.png"
+              src="https://i.ibb.co.com/P20ks5p/Screenshot-2025-03-25-011217.png"
               alt="image"
               className="w-full h-[260px] object-cover rounded-t-xl"
             />
 
             <div className="p-5">
               <h1 className="text-[1.3rem] font-bold text-green-400 leading-[24px]">
-                Marathon Management Application
+                Marathon Management 
               </h1>
 
               <p className="text-gray-600 mt-3">
@@ -381,7 +381,7 @@ const Project = () => {
       </dialog>
 
       {/* ========================
-                      card 1 modal 
+                      card 2 modal 
            ===============================*/}
       <dialog id="my_modal_4" className="modal">
         <div className="modal-box md:max-w-6xl p-10 border-2 bg-black text-white">
@@ -395,7 +395,7 @@ const Project = () => {
             Marathon Management Application
           </h1>
           <img
-            src="https://i.ibb.co.com/ycdCkyqv/marathon-client-side-web-app-1.png"
+            src="https://i.ibb.co.com/P20ks5p/Screenshot-2025-03-25-011217.png"
             alt="image"
             className="w-full object-cover rounded-t-xl mb-5"
           />

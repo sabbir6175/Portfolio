@@ -21,8 +21,9 @@ const Hero = () => {
             <span className="text-green-400">
               <Typewriter
                 words={[
-                  "MERN Stack Developer",
+                  "Front-end Developer",
                   "UI/UX Designer",
+                  "MERN Stack Developer",
                  
                   
                 ]}
@@ -67,7 +68,7 @@ const Hero = () => {
           </div>
           <div className="py-6 flex justify-center md:justify-start gap-4">
           <button className="transition-all  bg-gradient-to-r from-red-400 to-green-500 duration-300 px-6 py-3 border-b-4  rounded-lg shadow-md  hover:text-white">
-              <a href="#">Resume</a>
+              <a href="https://drive.google.com/file/d/1f2SSGsNnqeNCUtWiPiFsXHPS4kewZ-2E/view" target="blank" >Resume</a>
             </button>
             <button className="transition-all  bg-gradient-to-r from-red-400 to-green-500 duration-300 px-6 py-3 border-b-4  rounded-lg shadow-md  hover:text-white">
               <a href="#contact">Contact</a>
