@@ -92,7 +92,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-white rounded hover:bg-gray-700 focus:outline-none"
+            className="p-2 rounded text-back focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden text-center bg-gray-800/70 backdrop-blur-md  text-white shadow-md transition-all duration-500 ease-in-out overflow-hidden ${
+        className={`md:hidden text-center bg-white backdrop-blur-md  text-black shadow-md transition-all duration-500 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? "max-h-screen p-4" : "max-h-0"
         }`}
       >
