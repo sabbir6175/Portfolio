@@ -10,13 +10,13 @@ import {
 
 const Hero = () => {
   return (
-    <section id="home" className="bg-black py-20 text-white">
-      <div className="flex mt-[64px] max-w-7xl mx-auto  gap-12 md:gap-2 flex-col-reverse md:flex-row items-center justify-between px-10 ">
+    <section id="home" className="py-20 text-black bg-white">
+      <div className="flex mt-[64px] max-w-7xl mx-auto py-3 gap-12 md:gap-2 flex-col-reverse md:flex-row items-center justify-between px-10 ">
         {/* Left Side Content */}
-        <div className="md:w-1/2 lg:max-w-md mx-auto text-center md:text-left space-y-3">
-          <p className="text-2xl md:text-3xl font-semibold text-white">Hello I'm</p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white">Sabbir Hasan</h1>
-          <h1 className="text-xl md:text-3xl font-bold mt-4">
+        <div className="mx-auto space-y-3 text-center md:w-1/2 lg:max-w-md md:text-left">
+          <p className="text-2xl font-semibold md:text-3xl">Hello I'm</p>
+          <h1 className="text-4xl font-bold lg:text-5xl">Sabbir Hasan</h1>
+          <h1 className="mt-4 text-xl font-bold md:text-3xl">
             {" "}
             <span className="text-green-400">
               <Typewriter
@@ -39,12 +39,12 @@ const Hero = () => {
           <p className="mt-6 text-gray-400">
           "I build beautiful, dynamic, and user-friendly web applications with a focus on seamless user experience and modern design. Proficient in React.js, Node.js, Express.js, MongoDB "
           </p>
-          <div className="pt-3 flex justify-center md:justify-start gap-6">
+          <div className="flex justify-center gap-6 pt-3 md:justify-start">
             <a
               href="https://github.com/sabbir6175"
               target="_blank"
               rel="noopener noreferrer"
-              className=" border bg-white text-black px-3 py-2 rounded-full shadow-lg hover:bg-red-300 transition-all duration-300"
+              className="px-3 py-2 text-black transition-all duration-300 bg-white border rounded-full shadow-lg"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -52,7 +52,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/sabbir-hasan6175/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border bg-white text-black  px-3 py-2 rounded-full shadow-lg hover:bg-red-300 transition-all duration-300"
+              className="px-3 py-2 text-black transition-all duration-300 bg-white border rounded-full shadow-lg"
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
@@ -61,26 +61,26 @@ const Hero = () => {
               href="https://www.facebook.com/sabbirhasan075"
               target="_blank"
               rel="noopener noreferrer"
-              className="border bg-white text-blue-600 px-3 py-2 rounded-full shadow-lg hover:bg-red-300 transition-all duration-300"
+              className="px-3 py-2 text-blue-600 transition-all duration-300 bg-white border rounded-full shadow-lg"
             >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </div>
-          <div className="py-6 flex justify-center md:justify-start gap-4">
-          <button className="transition-all  bg-gradient-to-r from-red-400 to-green-500 duration-300 px-6 py-3 border-b-4  rounded-lg shadow-md  hover:text-white">
+          <div className="flex justify-center gap-4 py-6 md:justify-start">
+          <button className="px-5 py-2 text-green-500 transition duration-200 bg-white border border-green-500 rounded-md hover:bg-green-100">
               <a href="https://drive.google.com/file/d/1f2SSGsNnqeNCUtWiPiFsXHPS4kewZ-2E/view" target="blank" >Resume</a>
             </button>
-            <button className="transition-all  bg-gradient-to-r from-red-400 to-green-500 duration-300 px-6 py-3 border-b-4  rounded-lg shadow-md  hover:text-white">
+            <button className="px-5 py-2 text-white transition duration-200 bg-green-500 rounded-md hover:bg-green-600">
               <a href="#contact">Contact</a>
             </button>
           </div>
         </div>
 
         {/* Right Side Image */}
-        <div className="md:w-1/2 flex justify-center">
+        <div className="flex justify-center md:w-1/2">
           <div className="relative group">
             {/* Gradient Circle */}
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-blue-400 to-cyan-300 rounded-full blur-md group-hover:blur-xl transition-all duration-500"></div>
+            <div className="absolute inset-0 transition-all duration-500 rounded-full bg-gradient-to-r from-pink-500 via-blue-400 to-cyan-300 blur-md group-hover:blur-xl"></div>
             {/* Image */}
             <img
               src={image}

@@ -1,23 +1,29 @@
-/* .borderBeam {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--size);
-    height: var(--size);
-    border: var(--border-width) solid transparent;
-    background: linear-gradient(135deg, var(--color-from) 25%, var(--color-to) 25%, var(--color-to) 50%, var(--color-from) 50%, var(--color-from) 75%, var(--color-to) 75%, var(--color-to));
-    background-size: 20px 20px;
-    animation: animate-border var(--duration) infinite;
-    transform-origin: var(--anchor);
-    animation-delay: var(--delay);
+.borderBeam {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--size, 100px);
+  height: var(--size, 100px);
+  border: var(--border-width, 2px) solid transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    var(--color-from, #87CEEB) 0%,
+    var(--color-to, #00BFFF) 70%
+  );
+  opacity: 0.2;
+  animation: borderPulse var(--duration, 10s) infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes borderPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.15;
   }
-  
-  @keyframes animate-border {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.35;
   }
-   */
+}

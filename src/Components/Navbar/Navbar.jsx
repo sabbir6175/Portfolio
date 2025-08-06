@@ -48,19 +48,19 @@ const Navbar = () => {
     <div
       className={`fixed px-2 md:px-5  top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-gray-800/70 backdrop-blur-md shadow-lg"
-          : "bg-black shadow-md"
+          ? "bg-green-50/70 backdrop-blur-md shadow-lg"
+          : "bg-white "
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-3">
+      <div className="flex items-center justify-between py-3 mx-auto max-w-7xl">
         {/* Logo */}
-        <div className="text-2xl font-bold text-white flex items-center gap-2">
+        <div className="flex items-center gap-2 text-2xl font-bold text-black">
           <img className="w-10 rounded-sm" src={logo} alt="Logo" />
           <span>Sabbir</span>
         </div>
 
         {/* Navigation Menu (Desktop) */}
-        <div className="hidden md:flex  rounded-full gap-6 text-white">
+        <div className="hidden gap-6 text-black rounded-full md:flex">
           {[
             { id: "home", label: "Home" },
             { id: "about", label: "About" },
@@ -84,7 +84,7 @@ const Navbar = () => {
 
         {/* Get Started Button (Desktop) */}
         <div className="hidden md:block">
-        <button className="transition-all bg-gradient-to-r from-red-400 to-green-500  text-white duration-300 px-6 py-2 border-b-4  rounded-lg shadow-md  hover:text-white">
+        <button className="px-5 py-2 text-green-500 transition duration-200 bg-white border border-green-500 rounded-md hover:bg-green-100">
               <a href="https://drive.google.com/file/d/1f2SSGsNnqeNCUtWiPiFsXHPS4kewZ-2E/view" target="blank" >Resume</a>
             </button>
         </div>
@@ -92,7 +92,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white hover:bg-gray-700 p-2 rounded focus:outline-none"
+            className="p-2 text-white rounded hover:bg-gray-700 focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
