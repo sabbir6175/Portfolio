@@ -1,6 +1,5 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../assets/logo2.jpg";
-
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,10 +45,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed px-2 md:px-5  top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? " backdrop-blur-md shadow"
-          : " "
+      className={`fixed px-2 md:px-5 top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "backdrop-blur-md shadow" : " "
       }`}
     >
       <div className="flex items-center justify-between py-3 container mx-auto">
@@ -84,10 +81,18 @@ const Navbar = () => {
 
         {/* Get Started Button (Desktop) */}
         <div className="hidden md:block">
-        <button className="px-5 py-2 text-green-500 transition duration-200 bg-white border border-green-500 rounded-md hover:bg-green-100">
-              <a href="https://drive.google.com/file/d/1f2SSGsNnqeNCUtWiPiFsXHPS4kewZ-2E/view" target="blank" >Resume</a>
-            </button>
+          <button className="px-5 py-2 text-green-500 transition duration-200  border  border-green-500 rounded-md  flex items-center gap-2">
+            <a
+              href="https://drive.google.com/file/d/1f2SSGsNnqeNCUtWiPiFsXHPS4kewZ-2E/view"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hire Me
+            </a>
+           
+          </button>
         </div>
+
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button
@@ -114,7 +119,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden text-center bg-white backdrop-blur-md  text-black shadow-md transition-all duration-500 ease-in-out overflow-hidden ${
+        className={`md:hidden text-center  backdrop-blur-md text-black shadow transition-all duration-500 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? "max-h-screen p-4" : "max-h-0"
         }`}
       >
@@ -126,14 +131,15 @@ const Navbar = () => {
           { id: "contact", label: "Contact" },
         ].map((section) => (
           <a
-              key={section.id}
-              href={`#${section.id}`}
-              className={`block py-2 hover:text-green-400 transition ${
-                activeSection === section.id
-                  ? "text-green-400 font-bold active-link"
-                  : ""
-              }`}
-            > 
+            key={section.id}
+            href={`#${section.id}`}
+            onClick={() => setIsMobileMenuOpen(false)} // Close menu on click
+            className={`block py-2 hover:text-green-400 transition ${
+              activeSection === section.id
+                ? "text-green-400 font-bold active-link"
+                : ""
+            }`}
+          >
             {section.label}
           </a>
         ))}
