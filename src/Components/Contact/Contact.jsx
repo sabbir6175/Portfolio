@@ -16,9 +16,6 @@ const Contact = () => {
         form.current,
         "EO0xLcYxtpls1zmPi" // আপনার Public Key
       )
-      // .then(res =>{
-      //   toast.success('Message sent successfully')
-      // })
       .then(
         (result) => {
           console.log("Message sent successfully!", result);
@@ -32,7 +29,7 @@ const Contact = () => {
           form.current.reset();
         },
         (error) => {
-          console.error("EmailJS Error:", error); // Better error logging
+          console.error("EmailJS Error:", error);
           Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -42,30 +39,30 @@ const Contact = () => {
       );
   };
 
+ 
+
   return (
-    <section
-      id="contact"
-      className="px-5 py-10 text-black bg-white md:px-20 lg:px-40"
-    >
+    <section id="contact" className="px-5 py-10 text-black bg-white md:px-20 lg:px-40">
       <div className="text-center">
-        <h2 className="mb-4 text-4xl font-bold">Get in Touch</h2>
-        <p className="mb-10 ">
+        <h2 className="mb-4 text-2xl md:text-4xl font-bold">Contact Me</h2>
+        <p className="mb-10 text-base">
           Feel free to contact me through email, phone, or WhatsApp. I would
           love to hear from you!
         </p>
       </div>
 
-      <div className="grid items-center justify-between grid-cols-1 gap-10 py-3 mx-auto max-w-7xl md:grid-cols-2">
+      <div
+      
+        className="grid items-center justify-between grid-cols-1 gap-10 py-3 rounded-md container mx-auto  border px-3 lg:px-10 md:grid-cols-2"
+      >
         {/* Contact Information */}
         <div className="space-y-6">
           <div>
-            <h3 className="mb-2 text-2xl font-semibold">Contact Info</h3>
-            <p className="">
-              Here are my details for easy communication.
-            </p>
+            <h3 className="mb-2 text-xl font-semibold">Contact Info</h3>
+            <p>Here are my details for easy communication.</p>
           </div>
           <div className="flex items-center gap-4">
-            <span className="p-3 bg-green-300 rounded-full">
+            <span className="p-3 bg-green-200 rounded-full">
               <MdEmail></MdEmail>
             </span>
             <div>
@@ -77,30 +74,26 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="inline-block rounded 2"
                 >
-                  sabbirhasannahid6175@gmail.com
+                  Going to gmail
                 </a>
               </p>
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <span className="p-3 bg-green-300 rounded-full">
+            <span className="p-3 bg-green-200 rounded-full">
               <BiPhone></BiPhone>
             </span>
             <div>
               <h4 className="mb-3 font-bold">Phone</h4>
               <p>
-                <a
-                  href="tel:+8801310101661"
-                 
-                  className="px-3 py-2 rounded-sm shadow-sm"
-                >
+                <a href="tel:+8801310101661" className="px-3 py-2 rounded-sm shadow-sm">
                   01310101661
                 </a>
               </p>
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <span className="p-3 bg-green-300 rounded-full">
+            <span className="p-3 bg-green-200 rounded-full">
               <BiLogoMessenger></BiLogoMessenger>
             </span>
             <div>
@@ -119,7 +112,7 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="p-3 bg-green-300 rounded-full">
+            <span className="p-3 bg-green-200 rounded-full">
               <BiLogoWhatsappSquare></BiLogoWhatsappSquare>
             </span>
             <div>
@@ -140,7 +133,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div>
-          <h3 className="mb-4 text-2xl font-semibold">Send Me a Message</h3>
+          <h3 className="mb-4 text-xl font-semibold">Send Me a Message</h3>
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
               <label htmlFor="name" className="block mb-1 ">
@@ -182,7 +175,7 @@ const Contact = () => {
               type="submit"
               className="flex items-center gap-2 px-5 py-2 text-white transition duration-200 bg-green-500 rounded-md hover:bg-green-600 "
             >
-               <FaPaperPlane />
+              <FaPaperPlane />
               Send Message
             </button>
           </form>

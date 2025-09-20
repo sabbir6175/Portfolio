@@ -48,11 +48,11 @@ const Navbar = () => {
     <div
       className={`fixed px-2 md:px-5  top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-green-50/70 backdrop-blur-md shadow-lg"
-          : "bg-white "
+          ? " backdrop-blur-md shadow"
+          : " "
       }`}
     >
-      <div className="flex items-center justify-between py-3 mx-auto max-w-7xl">
+      <div className="flex items-center justify-between py-3 container mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl font-bold text-black">
           <img className="w-10 rounded-sm" src={logo} alt="Logo" />

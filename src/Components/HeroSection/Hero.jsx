@@ -10,19 +10,18 @@ import {
 
 const Hero = () => {
   return (
-    <section id="home" className="py-20 text-black bg-white">
-      <div className="flex mt-[64px] max-w-7xl mx-auto py-3 gap-12 md:gap-2 flex-col-reverse md:flex-row items-center justify-between px-10 ">
+    <section id="home" className="pt-20 pb-10  text-black bg-white">
+      <div className="flex mt-[64px] container mx-auto py-3 gap-12 md:gap-2 flex-col-reverse md:flex-row items-center justify-between  px-6 ">
         {/* Left Side Content */}
-        <div className="mx-auto space-y-3 text-center md:w-1/2 lg:max-w-md md:text-left">
-          <p className="text-2xl font-semibold md:text-3xl">Hello I'm</p>
-          <h1 className="text-4xl font-bold lg:text-5xl">Sabbir Hasan</h1>
-          <h1 className="mt-4 text-xl font-bold md:text-3xl">
+        <div className=" space-y-3 text-center  md:text-left">
+          <p className="text-2xl font-semibold ">Hello I'm</p>
+          <h1 className="text-4xl font-bold ">Sabbir Hasan</h1>
+          <h1 className="mt-4 text-xl font-bold md:text-2xl">
             {" "}
             <span className="text-green-400">
               <Typewriter
                 words={[
                   "Front-end Developer",
-                  "UI/UX Designer",
                   "MERN Stack Developer",
                  
                   
@@ -36,8 +35,8 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="mt-6 text-gray-400">
-          "I build beautiful, dynamic, and user-friendly web applications with a focus on seamless user experience and modern design. Proficient in React.js, Node.js, Express.js, MongoDB "
+          <p className="mt-6 text-gray-400 md:mr-20">
+          "I build beautiful, dynamic, and user-friendly web applications with a focus <br /> on seamless user experience and modern design. Proficient in React.js, Node.js, Express.js, MongoDB "
           </p>
           <div className="flex justify-center gap-6 pt-3 md:justify-start">
             <a

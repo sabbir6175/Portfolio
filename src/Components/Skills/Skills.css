@@ -27,3 +27,38 @@
     opacity: 0.35;
   }
 }
+
+/* Custom styles for Swiper pagination dots */
+/* Custom styles for Swiper pagination dots */
+.swiper-pagination {
+  bottom: 10px !important; /* Adjust this value to move the dots down */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2dc966 !important;
+}
+
+/* Custom styles for Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #2dc966 !important; /* Change arrow color to match your green */
+  font-weight: 700 !important;
+  font-size: 20px !important;
+}
+
+/* Position the arrows on the side of the container */
+.swiper-button-next {
+  right: 0px !important; /* Adjust as needed */
+  top: 50% !important; /* Adjust as needed */
+}
+
+.swiper-button-prev {
+  left: 0px !important; /* Adjust as needed */
+  top: 50% !important; /* Adjust as needed */
+}
+
+/* Optional: Hide default arrows if you want to use custom ones from a library */
+/* .swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+} */
